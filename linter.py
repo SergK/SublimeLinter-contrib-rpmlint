@@ -21,10 +21,10 @@ class Rpmlint(Linter):
     cmd = 'rpmlint'
     executable = None
     regex = (
-        r'^(?P<line>\d+):'
-        r'((?P<warning>W\:)|(?P<error>error\:)):'
-        r'(?P<message>.+)'
+        r'(?P<line>\d+):'
+        r'(?:(?P<warning>W)|(?P<error>error))'
+        r'(?:P<message>.+)'
     )
     tempfile_suffix = '-'
     error_stream = util.STREAM_STDOUT
-    word_re = r'^(".*?"|[-\w]+)'
+
