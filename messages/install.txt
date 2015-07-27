@@ -1,0 +1,10 @@
+SublimeLinter-contrib-rpmlint
+-------------------------------
+This linter plugin for SublimeLinter provides an interface to rpmlint.
+
+** IMPORTANT! **
+
+Before this plugin will activate, you *must*
+follow the installation instructions here:
+
+https://github.com/skulanov,,,/SublimeLinter-contrib-rpmlint
