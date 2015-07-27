@@ -2,8 +2,8 @@
 # linter.py
 # Linter for SublimeLinter3, a code checking framework for Sublime Text 3
 #
-# Written by skulanov,,,
-# Copyright (c) 2015 skulanov,,,
+# Written by Sergey Kulanov
+# Copyright (c) 2015 Sergey Kulanov
 #
 # License: MIT
 #
@@ -21,10 +21,10 @@ class Rpmlint(Linter):
     cmd = 'rpmlint'
     executable = None
     regex = (
-        r'(?P<line>\d+):'
-        r'(?:(?P<warning>W)|(?P<error>error))'
-        r'(?:P<message>.+)'
+        r'^.+?[:,\ ](?P<line>\d+)'
+        r'(?:(?P<warning>W)|(?P<error>error):)'
+        r':(?P<message>.+)'
     )
     tempfile_suffix = '-'
-    error_stream = util.STREAM_STDOUT
+    error_stream = util.STREAM_BOTH
 
