@@ -20,11 +20,6 @@ class Rpmlint(Linter):
     syntax = 'rpm spec'
     cmd = 'rpmlint'
     executable = None
-    regex = (
-        r'^.+?[:,\ ](?P<line>\d+)'
-        r'(?:(?P<warning>W)|(?P<error>error):)'
-        r':(?P<message>.+)'
-    )
+    regex = r'^.+?[:,\ ](?P<line>\d+):(?P<message>.+)'
     tempfile_suffix = '-'
     error_stream = util.STREAM_BOTH
-
